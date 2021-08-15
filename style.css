@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*---------------Applied to all pages ----------------------*/
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 250px;
+}
+
+.nav-links {
+    text-align: right;
+}
+
+.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links ul li:hover {
+    background-color: orangered;
+}
+
+.nav-links ul li a:hover {
+    color: black;
+}
+
+
+/*---------------Home Page----------------------*/
+
+.introduction {
+    width: 100%;
+    color: white;
+    background-color: rgba(4, 9, 30, 0.5);
+    text-align: center;
+}
+
+.introduction h1 {
+    font-size: 65px;
+}
+
+.introduction p {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.introduction ul li {
+    font-size: 30px;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 20px 34px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    background: transparent;
+}
+
+.button:hover {
+    border: 10px solid black;
+    background: #F44336;
+    transition: 1s;
+}
+
+
+/*----------------Menu Page--------------------*/
+
+.menu-type {
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: 5px solid yellow;
+    font-weight: bold;
+    padding: 20px 25px;
+    margin-top: 40px;
+}
+
+.menu {
+    background-image: linear-gradient(rgb(255, 81, 0.7), rgba(255, 0, 0, 0.2));
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.menu-grid {
+    width: 25rem;
+    height: 42rem;
+    background-color: white;
+    margin-left: 4%;
+    border-radius: 5px;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+}
+
+.food-img {
+    max-height: 50%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.food-name {
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+}
+
+.food-description {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.food-price {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    color: #da6b1d;
+}
+
+.menu-grid:hover {
+    box-shadow: 0 0 5rem rgba(0, 0, 0, 1);
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.order-button {
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    padding: 20px 30px;
+    color: white;
+    background-color: green;
+    display: block;
+    margin: 17px auto;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.order-button:hover {
+    background-color: black;
+    transform: scale(1.10);
+}
+
+
+/*----------------Footer-------------------*/
+
+footer {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btt-button {
+    /*------BACK TO TOP BUTTON-------*/
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 5px solid black;
+    padding: 20px 34px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+}
+
+.btt-button:hover {
+    /*------BACK TO TOP BUTTON-------*/
+    border: 15px solid black;
+    background: yellow;
+    transition: 0.5s;
+}
+
+
+/*----------------Contact Us Page--------------------*/
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+label {
+    color: white;
+}
+
+input[type=date] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.contact {
+    width: 800px;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.info {
+    background-color: rgb(0, 0, 0, 0.4);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.location {
+    background-color: rgb(0, 0, 0, 0.4);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.main {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 800px;
+    margin: auto;
+}
+
+form {
+    padding: 10px;
+}
+
+.submit {
+    background-color: #3BAF9F;
+    display: block;
+    margin: 20px 0px 0px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #366473;
+    padding: 14px 110px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #5390f5;
+}
+
+
+/*----------------Jobs Page--------------------*/
+
+.jobs {
+    width: 800px;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: auto;
+    color: #FFFFFF;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.jobpage p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.jobpage p a {
+    text-align: center;
+    color: rgb(178, 193, 243);
+    font-weight: bold;
+}
+
+.jobpage h5 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+}
+
+.jobpage h6 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(0, 0, 0, 0.6);
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+}
+
+
+/*----------------About Us Page--------------------*/
+
+.video iframe {
+    display: block;
+    margin: auto;
+}
+
+.video h2 {
+    border: 3px solid black;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    background-color: maroon;
+}
+
+figcaption {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: black;
+}

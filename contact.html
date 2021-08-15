@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PizzaHut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpg" alt="PizzaHut's Logo" class="logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="job.html">JOIN US</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="contact">
+            <h1>Contact Us</h1>
+        </div>
+
+        <div class="main">
+            <form>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="fullname" placeholder="Your name.." required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address.." required>
+
+                <div class="info">
+                    <h1>Info</h1>
+                </div>
+
+
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                     <option value="food">Food</option>
+                     <option value="service">Service</option>
+                     <option value="cleanliness">Cleanliness</option>
+                     <option value="others">Others</option>
+                   </select>
+
+                <label for="timevisit">Time of Visit</label>
+                <select id="timevisit" name="timevisit">
+                     <option value="morning">Mid Morning (10am - 12pm)</option>
+                     <option value="lunch">Lunch (12pm - 2pm)</option>
+                     <option value="afternoon">Afternoon (2pm - 6pm)</option>
+                     <option value="dinner">Dinner (6pm - 9pm)</option>
+                     <option value="cleanliness">After Dinner (9pm - 12midnite)</option>
+                   </select>
+
+                <label for="typevisit">Type of Visit</label>
+                <select id="typevisit" name="typevisit">
+                        <option value="dinein">Dine In</option>
+                        <option value="takeaway">Take Away</option>  
+                        <option value="pickup">Pick Up</option>
+                        <option value="delivery">Delivery</option>
+                      </select>
+
+                <label for="date">Date of Visit</label>
+                <input type="date" id="date" name="date" placeholder="Date of Visit" required>
+
+                <label for="feedback_suggestion">Feedback/Suggestion</label>
+                <textarea id="feedback_suggestion" name="feedback_suggestion" placeholder="Feedback/Suggestion" style="height:200px" required></textarea>
+
+                </select>
+                <button type="submit" class="submit">Submit</button>
+
+                </label>
+
+            </form>
+            <div class="location">
+                <h1>Our Location</h1>
+            </div>
+            <p>
+                <iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127483.40962601821!2d101.62527795467058!3d3.132584214047091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc482f39775f63%3A0x2c32d3d74592af43!2sPizza%20Hut!5e0!3m2!1sen!2smy!4v1628861540368!5m2!1sen!2smy "
+                    width="100% " height="450 " style="border:0;"></iframe></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!----------------------------------Footer----------------------------------->
+
+    <footer>
+        <h4>Copyright &copy; 2009-2021 Pizza Hut Restaurants Sdn Bhd (Company No. 113925-U) &nbsp;(A member of QSR Brands Sdn Bhd).</h4>
+    </footer>
+</body>
+
+</html>
