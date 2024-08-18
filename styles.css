@@ -476,7 +476,7 @@ footer p{
 }
 
 /* Responsive Design */
-@media (min-width:481px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .nav-button-container {
         flex-wrap: wrap;
         justify-content: center;
@@ -558,7 +558,7 @@ footer p{
     }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .nav-button-container {
         justify-content: space-between; /* Adjust spacing */
     }
