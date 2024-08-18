@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites - Chinese Restaurant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script type='text/javascript'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=66c17ebf68510d00196ce948&product=inline-share-buttons'
+        async='async'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="res2.css" rel="stylesheet">
+    <link href="4.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url("backimg.png");
+            background-color: rgba(255, 255, 255, 0.9);
+            background-blend-mode: overlay;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            color: black;
+            background-color: #e89c00;
+            padding: 12px 16px;
+        }
+
+        /* Category section styles */
+        section {
+            padding: 2em;
+            text-align: center;
+        }
+
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .restaurant-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .restaurant-image {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .restaurant-image.active {
+            display: block;
+        }
+
+        .restaurant-info {
+            padding: 1rem;
+        }
+
+        .restaurant-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .restaurant-cuisine {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .restaurant-rating {
+            color: #f8ce0b;
+            margin-bottom: 0.5rem;
+        }
+
+        .restaurant-address {
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .category {
+            padding: 2rem 1rem;
+        }
+
+        .category h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .restaurant-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Back to Main Page Button -->
+        <button id="back-btn" onclick="window.location.href='index.html';">Back to Main Page</button>
+        <h1>Chinese Restaurant</h1>
+        <!-- Buttons to switch between food and drink lists -->
+        <nav class="nav-button-container">
+                <a href="#rice"><button id="drink-btn" class="menu-btn">Rice</button></a>
+                <a href="#noodles"><button id="food-btn" class="menu-btn">Noodles</button></a>
+                <a href="#pastry"><button id="dessert-btn" class="menu-btn">Pastry</button></a>
+        </nav>
+      </header>
+
+      <h2 style="text-align: center;"> <b>Recommended Malaysian Chinese Cuisine Restaurant </b></h2>
+      <main>
+  
+          <section id="rice" class="category">
+              <h2>Rice Dishes</h2>
+              <div class="restaurant-grid">
+                  <!-- First Restaurant -->
+                  <div class="restaurant-card">
+                      <div class="restaurant-slider">
+                          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="10000">
+                                      <img src="images/namheong.jpg" class="d-block w-100" alt="namheong" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                      <img src="images/namheong2.jpg" class="d-block w-100" alt="namheong2" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item">
+                                      <img src="images/namheong3.jpg" class="d-block w-100" alt="namheong3" width="300px"
+                                          height="530px">
+                                  </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+  
+                      </div>
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Nasi Ayam Hainan Chee Meng</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address">1. 50, Jalan Bukit Bintang, Kuala Lumpur
+                              <br>2. Sub Lot A-1, Batu 4 1/4, Jalan Kelang Lama, Kuala Lumpur
+                              <br>3. 20, Jalan U1/36, Hicom Glenmarie Industrial Park, Shah Alam, Selangor</b>
+                          </p>
+                          <p>The restaurant is well-known among locals for its signature Hainanese chicken rice.
+                              At Nasi Ayam Chee Meng, they take immense pride in their offerings, especially the food.
+                              With fantastic service, a cozy atmosphere, and authentic Hainanese cuisine,
+                              they aim to make every dining experience a memorable one.</p>
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-CheeMeng" onclick="toggleFavorite('CheeMeng')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+  
+                  </div>
+  
+                  <div class="restaurant-card">
+                      <div class="restaurant-slider">
+                          <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="10000">
+                                      <img src="images/claypot1.jpg" class="d-block w-100" alt="namheong" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                      <img src="images/claypot2.jpg" class="d-block w-100" alt="namheong2" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item">
+                                      <img src="images/claypot3.jpg" class="d-block w-100" alt="namheong3" width="300px"
+                                          height="530px">
+                                  </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+  
+                      </div>
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Hong Kee Claypot Chicken Rice</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address"><br>83, Jalan Sultan, City Centre, 50000 Kuala Lumpur, Wilayah
+                              <br>
+                              Persekutuan Kuala Lumpur </br>
+                          </p>
+                          <p>
+                          <div class="container">
+                              <b></b>
+                          </div>At Hong Kee, the claypots of chicken rice are cooked over a traditional charcoal fire.
+                          The small claypot comes with tender chicken, slices of Chinese sausage, salted fish,
+                          and is topped with fragrant oil, dark soy sauce, and an optional raw egg.
+                          The egg not only adds a rich flavor but also coats the rice, making it smooth without the need
+                          for excessive oil.</p>
+  
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-HongKee" onclick="toggleFavorite('HongKee')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+          </section>
+  
+          <section id="noodles" class="category">
+              <h2>Noodle dishes</h2>
+              <div class="restaurant-grid">
+                  <div class="restaurant-card">
+                      <div class="restaurant-slider">
+                          <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="10000">
+                                      <img src="images/ahleng.jpg" class="d-block w-100" alt="ahleng" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                      <img src="images/ahleng2.jpg" class="d-block w-100" alt="ahleng2" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item">
+                                      <img src="images/ahleng3.jpg" class="d-block w-100" alt="ahleng3" width="300px"
+                                          height="530px">
+                                  </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+                      </div>
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Penang Ah Leng Char Koay Teow</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address">343, Jalan Dato Keramat, George Town, 10150 George Town, Pulau
+                              Pinang, Malaysia </p>
+                          <p>The kuay teow was light and perfectly separated, with a satisfying hint of wok hei.
+                              You can choose a regular plate of char kuay teow for RM6, or the special version with mantis
+                              prawns for RM10.</p>
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-AhLeng" onclick="toggleFavorite('AhLeng')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+  
+                  <div class="restaurant-card">
+                      <div class="restaurant-slider">
+                          <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="10000">
+                                      <img src="images/damansarauptownhokkienmee.jpg" class="d-block w-100"
+                                          alt="damansarauptownhokkienmee" width="300px" height="530px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                      <img src="images/damansarauptownhokkienmee2.jpg" class="d-block w-100"
+                                          alt="damansarauptownhokkienmee2" width="300px" height="530px">
+                                  </div>
+                                  <div class="carousel-item">
+                                      <img src="images/damansarahokkienmee3.jpg" class="d-block w-100"
+                                          alt="damansarauptownhokkienmee3" width="300px" height="530px">
+                                  </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleInterval4" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleInterval4" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+                      </div>
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Damansara Uptown Hokkien Mee</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address">117, 119, 121, Jalan SS 21/37,
+                              Damansara Utama</p>
+                          <P>Serving traditional-style Hokkien Mee in a newly renovated, air-conditioned setting, this
+                              restaurant ensures a satisfying dose of wok hei in every bite.
+                              Be sure to try the roast duck, fried chicken, and chili lala—these crowd favorites are
+                              highly recommended!
+                              The restaurant also has two additional branches located in Puchong and Kota Damansara.</P>
+  
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-DamansaraUhokkienmee"
+                                      onclick="toggleFavorite('DamansaraUhokkienmee')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+  
+  
+          </section>
+  
+  
+          <section id="pastry" class="category">
+              <h2>Pastry</h2>
+              <div class="restaurant-grid">
+                  <!-- First Restaurant -->
+                  <div class="restaurant-card">
+                      <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                              <div class="carousel-item active" data-bs-interval="10000">
+                                  <img src="images/singuanhoe1.jpg" class="d-block w-100" alt="singuanhoe1" width="300px"
+                                      height="530px">
+                              </div>
+                              <div class="carousel-item" data-bs-interval="2000">
+                                  <img src="images/singuanhoe2.jpg" class="d-block w-100" alt="singuanhoe2" width="300px"
+                                      height="530px">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="images/singuanhoe3.jpg" class="d-block w-100" alt="singuanhoe3" width="300px"
+                                      height="530px">
+                              </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval5"
+                              data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval5"
+                              data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
+  
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Sin Guan Hoe Biscuit</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address">
+                              23, Jalan Pasir Bendamar, 36000Teluk Intan, Perak</p>
+                          <p>Heong Peng from Kedai Biskut Sin Guan Hoe in Teluk Intan is a well-known local specialty.
+                              This version is distinguished by its rich and flavorful filling,
+                              complemented by a generous amount of sesame sauce that enhances its taste and aroma.
+                              The Heong Peng is priced at RM 6.50.</p>
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-SinGuanHoe" onclick="toggleFavorite('SinGuanHoe')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <div class="restaurant-card">
+                      <div class="restaurant-slider">
+                          <div id="carouselExampleInterval6" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                  <div class="carousel-item active" data-bs-interval="10000">
+                                      <img src="images/chinghanguan.jpg" class="d-block w-100" alt="chinghanguan" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item" data-bs-interval="2000">
+                                      <img src="images/chinhanguan2.jpg" class="d-block w-100" alt="singuanhoe2" width="300px"
+                                          height="530px">
+                                  </div>
+                                  <div class="carousel-item">
+                                      <img src="images/chinhanguan3.jpg" class="d-block w-100" alt="singuanhoe3" width="300px"
+                                          height="530px">
+                                  </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleInterval6" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleInterval6" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+                      </div>
+                      <div class="restaurant-info">
+                          <h3 class="restaurant-name">Ching Han Guan Biscuit</h3>
+                          <p class="restaurant-cuisine">Malaysian, Chinese</p>
+                          <p class="restaurant-address">145, Jalan Sultan Iskandar
+                              30000 Ipoh, Perak</p>
+                          <p>This famous Ipoh biscuit shop is renowned for its traditional pastries, including floss
+                              biscuits and mooncakes.
+                              They use high-quality ingredients and craft their biscuits with care and passion.
+                              Their handmade biscuits are always fresh, offering unique textures and a less sweet taste,
+                              thanks to the use of natural flavors.</p>
+                          <div class="container">
+                              <div class="d-flex justify-content-end">
+                                  <button class="btn" id="favorite-btn-ChingHanGuan"
+                                      onclick="toggleFavorite('ChingHanGuan')">
+                                      <i class="bi bi-heart"></i>
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+          </section>
+  
+          <div class="sharethis-inline-share-buttons"></div>
+          <div id="cookie-consent-banner" class="cookie-banner">
+              <p class="cookie-text">
+                  We value your privacy. We use cookies to enhance your browsing experience and analyze our traffic. By
+                  clicking "Accept All", you consent to our use of cookies.
+              </p>
+              <div class="cookie-buttons">
+                  <button id="reject-all" class="cookie-button">Reject All</button>
+                  <button id="accept-all" class="cookie-button accept-button">Accept All</button>
+              </div>
+          </div>
+  
+          <footer>
+              <nav>
+                  <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+          </footer>
+  </body>
+  <script src="cookies_cn.js"></script>
+  <script src="res2.js"></script>
+  <script src="favouriteres.js"></script>
+  
+  
+  
+  </html>

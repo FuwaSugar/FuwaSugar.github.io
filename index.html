@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites - Your Cuisines Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>   
+        <h1>Tasty Bites</h1>
+        <nav class="nav-button-container">
+            <a href="#" class="nav-button">Home</a>
+            <div class="dropdown">
+                <button class="nav-button dropdown-btn">Cuisine</a>
+                <div class="dropdown-content">
+                    <a href="malay.html">Malay Cuisine</a>
+                    <a href="chinese.html">Chinese Cuisine</a>
+                    <a href="indian.html">Indian Cuisine</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="nav-button dropdown-btn">Restaurant</a>
+                <div class="dropdown-content">
+                    <a href="malay_res.html">Malay Restaurant</a>
+                    <a href="chinese_res.html">Chinese Restaurant</a>
+                    <a href="indian_res.html">Indian Restaurant</a>
+                </div>
+            </div>
+            <a href="#Blog" class="nav-button">Blog</a>
+            <a href="aboutUs.html" class="nav-button">About Us</a>
+            <a href="contactUs.html" class="nav-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner1">
+        <p>This website uses cookies to improve your experience. 
+        <button id="acceptCookies">Accept</button>
+        <button id="declineCookies">Decline</button>
+        </p>
+    </div>
+    
+    <section id="home" class="banner1">
+        <div class="banner1-overlay"></div>
+        <div class="banner1-content">
+            <h2>Welcome to Tasty Bites!</h2>
+            <p>Your go-to source for delicious cuisines and cooking tips.</p>
+        </div>
+    </section>
+
+    <section id="trends" class="section-design">
+        <h2>Today's Trend</h2>
+    </section>
+    <div class="trends-section">
+        <div class="trends-grid">
+            <div class="trend-item">
+                <a href="malay.html#chicken-rendang">
+                    <img src="images/chicken_rendang.jpg" alt="Trend 1">
+                    <div class="trend-info">
+                        <p>Malay</p>
+                        <h3>Chicken Rendang</h3>
+                        <p>4.2⭐ 280 Ratings</p>
+                    </div>
+                </a>
+            </div>
+            <div class="trend-item">
+                <a href="chinese.html#hokkienmee">
+                    <img src="images/hokkienmee.jpg" alt="Trend 2">
+                    <div class="trend-info">
+                        <p>Chinese</p>
+                        <h3>Hokkien Mee</h3>
+                        <p>4.4⭐ 109 Ratings</p>
+                    </div>
+                </a>
+            </div>
+            <div class="trend-item">
+                <a href="indian.html#lassi">
+                    <img src="images/Lassi.jpg" alt="Trend 3">
+                    <div class="trend-info">
+                        <p>Indian</p>
+                        <h3>Lassi</h3>
+                        <p>3.9⭐ 185 Ratings</p>
+                    </div>
+                </a>
+            </div>
+            <div class="trend-item">
+                <a href="indian.html#samosa">
+                    <img src="images/samosa.jpg" alt="Trend 4">
+                    <div class="trend-info">
+                        <p>Indian</p>
+                        <h3>Samosa</h3>
+                        <p>4.6⭐ 137 Ratings</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="Blog" class="section-design">
+        <h2>Blog</h2>
+    </section>
+    <article class="blog-post">
+        <img src="images/blog1.jpg" alt="Blog1 Image" class="blog-image">
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span>Travel Food Atlas · Updated on March 12, 2024</span>
+            </div>
+            <h2 class="blog-title">Malaysian Food: 17 Must-Try Traditional Dishes of Malaysia</h2>
+            <p class="blog-description">
+                Malaysian cuisine is certainly a reflection of the country's diversity, with thousands of unique delicacies to try.
+            </p>
+            <a href="https://travelfoodatlas.com/malaysian-food" class="read-more-button">Read More</a>
+        </div>
+    </article>      
+    <article class="blog-post">
+        <img src="images/blog2.jpg" alt="Blog2 Image" class="blog-image">
+        <div class="blog-content">
+            <div class="blog-meta">
+                <span>CNN Travel staff and Justin Calderon, CNN · Updated on July 20, 2023</span>
+            </div>
+            <h2 class="blog-title">Malaysia's top 40 foods</h2>
+            <p class="blog-description">
+                The sum of many delicious parts, Malaysian cuisine's influences include Chinese, Indian and Malay.
+            </p>
+            <a href="https://edition.cnn.com/travel/article/malaysian-food/index.html" class="read-more-button">Read More</a>
+        </div>
+    </article>
+    
+    <footer>
+        <!-- Social Media Plugins -->
+        <div class="social-media">
+            <h2>Share this page:</h2>
+            <!-- Facebook -->
+            <div id="fb-root"></div>
+            <div class="fb-share-button" data-href="https://www.yourwebsite.com" data-layout="button_count"></div>
+
+            <!-- Twitter -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check this out!">Tweet</a>
+
+            <!-- LinkedIn -->
+            <script type="IN/Share" data-url="https://www.yourwebsite.com"></script>
+        </div>
+
+        <!-- Scripts for Social Media Plugins -->
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+
+        <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+    </footer>
+
+    <script src="cookies_main.js"></script>
+</body>
+</html>

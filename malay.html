@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites - Malay Cuisines</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript_my.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Back to Main Page Button -->
+        <button id="back-btn" onclick="window.location.href='index.html';">Back to Main Page</button>
+        <h1>Malay Cuisines</h1>
+        <!-- Buttons to switch between food and drink lists -->
+        <nav class="nav-button-container">
+                <button id="food-btn" class="menu-btn active">Food</button></li>
+                <button id="drink-btn" class="menu-btn">Drink</button></li>
+                <button id="dessert-btn" class="menu-btn">Dessert</button></li>
+        </nav>
+    </header>
+
+    <section id="food-list" class="menu-section active">
+        <h2>Food Menu</h2><hr>
+        <ul class="menu">
+            <li>
+                <a href="#nasi-lemak" id="nasi-lemak" class="menu-item" data-food="nasi-lemak"><img src="images/nasi_lemak.jpg" alt="Nasi Lemak">
+                    <div>
+                        <h3>Nasi Lemak</h3>
+                        <p>A fragrant rice dish cooked in coconut milk and pandan leaf.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#satay" id="satay" class="menu-item" data-food="satay"><img src="images/satay.jpg" alt="Satay">
+                    <div>
+                        <h3>Satay</h3>
+                        <p>Grilled meat skewers served with peanut sauce.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#nasi-kerabu" id="nasi-kerabu" class="menu-item" data-food="nasi-kerabu"><img src="images/nasi_kerabu.jpg" alt="Nasi Kerabu">
+                    <div>
+                        <h3>Nasi Kerabu</h3>
+                        <p>Blue-colored rice is eaten with dried fish or fried chicken, crackers, pickles and other salads..</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#chicken-rendang" id="chicken-rendang" class="menu-item" data-food="chicken-rendang"><img src="images/chicken_rendang.jpg" alt="Chicken Rendang">
+                    <div>
+                        <h3>Chicken Rendang</h3>
+                        <p>Dry chicken curry made from coconut milk, spices, and aromatics like garlic, ginger, and lemongrass.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#lemang" id="lemang" class="menu-item" data-food="lemang"><img src="images/lemang.jpg" alt="Lemang">
+                    <div>
+                        <h3>Lemang</h3>
+                        <p>The rice is cooked in coconut milk and placed in bamboo sticks along with banana leaves just to keep separate the rice from bamboo sticks.</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="drink-list" class="menu-section active">
+        <h2>Drink Menu</h2><hr>
+        <ul class="menu">
+            <li>
+                <a href="#teh-tarik" id="teh-tarik" class="menu-item" data-food="teh-tarik"><img src="images/teh_tarik.jpg" alt="Teh Tarik">
+                    <div>
+                        <h3>Teh Tarik</h3>
+                        <p>A cup of "pulled tea" made of strong, locally-sourced black tea combined with either condensed or evaporated milk .</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#sirap-bandung" id="sirap-bandung" class="menu-item" data-food="sirap-bandung"><img src="images/sirap_bandung.jpg" alt="Sirap Bandung">
+                    <div>
+                        <h3>Sirap Bandung</h3>
+                        <p>A drink that consists of evaporated milk or condensed milk flavoured with rose syrup, giving it a pink colour.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#air-jagung" id="air-jagung" class="menu-item" data-food="air-jagung"><img src="images/air_jagung.jpg" alt="Air Jagung">
+                    <div>
+                        <h3>Air Jagung</h3>
+                        <p>A drink which key ingredients include tender corn kernels, milk, sugar, and occasionally coconut milk or condensed milk.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#milo-dinosaur" id="milo-dinosaur" class="menu-item" data-food="milo-dinosaur"><img src="images/milo_dinosaur.jpg" alt="Milo Dinosaur">
+                    <div>
+                        <h3>Milo Dinosaur</h3>
+                        <p>A drink that composed of a cup of iced Milo with undissolved Milo powder added on top of it. .</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="dessert-list" class="menu-section active">
+        <h2>Dessert Menu</h2><hr>
+        <ul class="menu">
+            <li>
+                <a href="#pisang-goreng" id="pisang-goreng" class="menu-item" data-food="pisang-goreng"><img src="images/pisang_goreng.jpg" alt="Pisang Goreng">
+                    <div>
+                        <h3>Pisang Goreng</h3>
+                        <p>A fritter made by deep frying battered banana or plantain in hot cooking oil.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#cendol" id="cendol" class="menu-item" data-food="cendol"><img src="images/cendol.jpg" alt="Cendol">
+                    <div>
+                        <h3>Cendol</h3>
+                        <p>An iced sweet dessert that contains droplets of pandan-flavoured green rice flour jelly, coconut milk and palm sugar syrup.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#otak-otak" id="otak-otak" class="menu-item" data-food="otak-otak"><img src="images/otak-otak.jpg" alt="Otak-otak">
+                    <div>
+                        <h3>Otak-otak</h3>
+                        <p>A Southeast Asian fish cake made from minced fish mixed with spices, wrapped in a leaf wrapper, and served steamed or grilled.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#kuih-seri-muka" id="kuih-seri-muka" class="menu-item" data-food="kuih-seri-muka"><img src="images/kuih_seri_muka.jpg" alt="Kuih Seri Muka">
+                    <div>
+                        <h3>Kuih Seri Muka</h3>
+                        <p>A two-layered dessert with steamed glutinous rice forming the bottom half and a green custard layer made with pandan juice.</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#bubur-cha-cha" id="bubur-cha-cha" class="menu-item" data-food="bubur-cha-cha"><img src="images/bubur_cha_cha.jpg" alt="Bubur Cha Cha">
+                    <div>
+                        <h3>Bubur Cha Cha</h3>
+                        <p>A dessert and breakfast dish that prepared using pearled sago, sweet potatoes, yams, bananas, coconut milk, pandan leaves, sugar and salt.</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <!-- Popup Window -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="popup-title"></h3>
+            <ul id="restaurant-list">
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <nav>
+        <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+    </footer>
+</body>
+</html>

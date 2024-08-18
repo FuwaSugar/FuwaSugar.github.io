@@ -1,0 +1,272 @@
+/* General Styles */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("backimg.png");
+    background-color: rgba(255, 255, 255, 0.9);
+    background-blend-mode: overlay;
+}
+
+/* Header Styles */
+header {
+    background-color: #f8b400;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: #e89c00;
+    padding: 12px 16px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #f8b400;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f8b400;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e89c00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #e89c00;
+}
+
+/* Banner Styles */
+#home {
+    position: relative;
+    background: url('banner1.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 4em 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner1-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner1-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.banner1-content p {
+    font-size: 1.25em;
+    margin-top: 0.5em;
+}
+
+/* Section Styles */
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+/* Container for Multiple Items */
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+/* General Styles for Items */
+.item {
+    width: 300px;
+    text-align: center;
+    background-color: #f8b820;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 1em;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.item h3 {
+    margin: 0.5em 0;
+}
+
+.item p {
+    margin: 0.5em 0;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 0.5em 0;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f8b400;
+    color: white;
+    padding: 0.75em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8503ff;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8b400;
+    color: white;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Responsive Image */
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    background-color: #f8b400;
+    color: white;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    border: 2px solid #f8b400;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    margin-top: 1em;
+    text-align: center;
+}
+
+/* Section-Specific Button Styling */
+.section-btn {
+    display: block;
+    text-align: center;
+    margin: 2em auto;
+    width: fit-content;
+}
+
+/* Hover Effects */
+.btn:hover {
+    background-color: white;
+    color: #f8b400;
+    border-color: #e89c00;
+    transform: scale(1.05);
+}
+
+/* Cookie Consent Banner */
+#cookieConsentBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f8b400;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+}
+
+#cookieConsentBanner button {
+    margin: 0 10px;
+    padding: 0.5em 1em;
+    background-color: white;
+    color: #f8b400;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#cookieConsentBanner button:hover {
+    background-color: #ddd;
+}

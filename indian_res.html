@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites - Indian Restaurant </title>
+    <link rel="stylesheet" href="styles2.css">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=66c172eeecd17b0019b85d52&product=inline-share-buttons&source=platform" async="async"></script>
+
+</head>
+<body>
+    <header>
+        <!-- Back to Main Page Button -->
+        <button id="back-btn" onclick="window.location.href='index.html';">Back to Main Page</button>
+        <h1>Indian Restaurant</h1>
+    </header>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsentBanner">
+        <p>This website uses cookies to improve your experience. 
+        <button id="acceptCookies">Accept</button>
+        <button id="declineCookies">Decline</button>
+        </p>
+    </div>
+
+    <section id="restaurants">
+        <h2>Top Indian Restaurants</h2>
+        
+        <div class="restaurant-card" data-id="mtr1924">
+            <div class="image-container">
+                <img src="images/MTR1924.jpg" alt="MTR 1924 Malaysia" class="visible">
+                <img src="images/mtr1.jpg" alt="MTR 1924 Malaysia Dish 1" class="hidden">
+            </div>
+            <div class="restaurant-info">
+                <h3>MTR 1924 Malaysia</h3>
+                <p>MTR 1924 Malaysia serves authentic South Indian vegetarian food since 1924.</p>
+                <p><strong>Best try foods:</strong> Podi Masala Dosa, Filter coffee, Onion Rava Dosa, Masala Dosa, Special Mini Meals, and more.</p>
+                <p><strong>Location:</strong> 69 Jalan Thambipillay, Brickfields, Kuala Lumpur 50470, Malaysia</p>
+                <p><strong>Price Range:</strong> RM 10.00 to RM 15.00</p>
+                <p><strong>Special Diets:</strong> Vegetarian Friendly, Vegan Options, Gluten Free Options</p>
+                <button class="favorite-btn">Add to Favorites</button>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="restaurant-card" data-id="betel-leaf">
+            <div class="image-container">
+                <img src="images/betel1.jpg" alt="Betel Leaf 1" class="visible">
+                <img src="images/betel2.jpg" alt="Betel Leaf 2" class="hidden">
+            </div>
+            <div class="restaurant-info">
+                <h3>Betel Leaf</h3>
+                <p>Betel Leaf was started in 2009 to provide a tasty, authentic Chettinad experience in Kuala Lumpur.</p>
+                <p><strong>Location:</strong> 77A Leboh Ampang, Kuala Lumpur 50100, Malaysia</p>
+                <p><strong>Best try foods:</strong> Lollipop Chicken, Bharag Brinjal, Chicken Betel leaf, Chicken Tikka Masala, Paneer Palak (Spinach with goat cheese), Naan, and more.</p>
+                <p><strong>Price Range:</strong> RM 22.00 to RM 88.00</p>
+                <p><strong>Special Diets:</strong> Vegetarian Friendly, Vegan Options, Halal, Gluten Free Options</p>
+                <button class="favorite-btn">Add to Favorites</button>
+            </div>
+        </div>
+        
+        <br>
+        
+        <div class="restaurant-card" data-id="kayra">
+            <div class="image-container">
+                <img src="images/kayra1.jpg" alt="Kayra 1" class="visible">
+                <img src="images/kayra2.jpg" alt="Kayra 2" class="hidden">
+            </div>
+            <div class="restaurant-info">
+                <h3>Kayra</h3>
+                <p>This restaurant in the vibrant city center offers a unique blend of Indian and Malaysian cuisine.</p>
+                <p><strong>Best try foods:</strong> Jackfruit Broccoli Moilee, Appam, Fish Moilee Briyani, Prawn Mango Curry, Kerala dhai puri, and more.</p>
+                <p><strong>Location:</strong> F08, 1st Floor, Bangsar Village 1, Jalan Telawi 1, Kuala Lumpur 59100, Malaysia</p>
+                <p><strong>Price Range:</strong> RM 25.00 to RM 90.00</p>
+                <p><strong>Special Diets:</strong> Vegetarian Friendly, Vegan Options</p>
+                <button class="favorite-btn">Add to Favorites</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="favorites">
+        <h2>Your Favorite Restaurants</h2>
+        <ul id="favoritesList"></ul>
+    </section>
+
+    <div class="sharethis-inline-share-buttons"></div>
+
+    <footer>
+        <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+    </footer>
+
+    <script src="cookies_in.js"></script>
+
+    <script>
+        // Function to update favorites in session storage
+    function updateFavorites(itemId) {
+        let favorites = JSON.parse(sessionStorage.getItem('favorites')) || [];
+        if (!favorites.includes(itemId)) {
+            favorites.push(itemId);
+            sessionStorage.setItem('favorites', JSON.stringify(favorites));
+            console.log('Favorites updated:', favorites);
+            displayFavorites(); // Update displayed favorites
+        }
+    }
+
+    // Function to remove favorites from session storage
+    function removeFavorite(itemId) {
+        let favorites = JSON.parse(sessionStorage.getItem('favorites')) || [];
+        favorites = favorites.filter(id => id !== itemId);
+        sessionStorage.setItem('favorites', JSON.stringify(favorites));
+        console.log('Favorites updated:', favorites);
+        displayFavorites(); 
+    }
+
+    // Function to display favorites on the page
+    function displayFavorites() {
+        const favoritesList = document.getElementById('favoritesList');
+        const favorites = JSON.parse(sessionStorage.getItem('favorites')) || [];
+        
+        favoritesList.innerHTML = '';
+        favorites.forEach(id => {
+            const restaurantName = document.querySelector(`.restaurant-card[data-id="${id}"] .restaurant-info h3`).textContent;
+            const listItem = document.createElement('li');
+            listItem.textContent = restaurantName;
+            favoritesList.appendChild(listItem);
+        });
+    }
+
+    // Event listener for favorite buttons
+    document.querySelectorAll('.favorite-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            let itemId = this.closest('.restaurant-card').getAttribute('data-id');
+            // Toggle favorite status
+            const favorites = JSON.parse(sessionStorage.getItem('favorites')) || [];
+            if (favorites.includes(itemId)) {
+                removeFavorite(itemId);
+            } else {
+                updateFavorites(itemId);
+            }
+        });
+    });
+
+    // Display favorites on page load
+    document.addEventListener('DOMContentLoaded', displayFavorites);
+
+    </script>
+</body>
+</html>

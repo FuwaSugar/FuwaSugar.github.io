@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasty Bites - Chinese Cuisine</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="4.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script type='text/javascript'
+    src='https://platform-api.sharethis.com/js/sharethis.js#property=66c17ebf68510d00196ce948&product=inline-share-buttons'
+    async='async'></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <header>
+    <!-- Back to Main Page Button -->
+    <button id="back-btn" onclick="window.location.href='index.html';">Back to Main Page</button>
+    <h1>Chinese Cuisines</h1>
+    <!-- Buttons to switch between food and drink lists -->
+    <nav class="nav-button-container">
+        <a href="#rice"><button id="drink-btn" class="menu-btn">Rice</button></a>
+        <a href="#noodles"><button id="food-btn" class="menu-btn">Noodles</button></a>
+        <a href="#pastry"><button id="dessert-btn" class="menu-btn">Pastry</button></a>
+    </nav>
+  </header>
+
+  <style>
+    .custom-card {
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+    }
+
+    .custom-card:hover .card-text {
+      display: block;
+    }
+
+    .custom-card:hover .card-body {
+      transform: translateY(0);
+    }
+
+    .card-title,
+    .btn {
+      z-index: 1;
+    }
+
+    .card-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-text {
+      flex-grow: 1;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .custom-img {
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      object-fit: cover;
+      min-height: 300px;
+      transition: transform 0.3 ease;
+    }
+
+    
+  </style>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <label for="toggleSoundSwitch"> Sound Effect <b> </label>
+    <label class="switch" id="" soundToggle>
+      <input type="checkbox" id="toggleSoundSwitch">
+      <span class="slider round"></span>
+    </label>
+    <section>
+      <h2 style="text-align: center;"> <b>Popular Malaysian Chinese Cuisine</b></h2>
+      <p>hover on the card to get more information!!</p>
+    </section>
+
+    <div id="rice" class="container text-center">
+      <h1> Rice</h1>
+      <!-- <div class="row row-cols-4"> -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/chickenrice.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Chicken Rice</h5>
+              <p class="card-text"> Chicken Rice is a simple yet beloved dish in Malaysian Chinese
+                cuisine.
+                It consists of poached or roasted chicken served over fragrant rice cooked in chicken fat and broth.
+                The dish is typically accompanied by a dipping sauce made from garlic, and chili, soy sauce as well as a
+                side of soup</p>
+              <a href="chinese_res.html#rice" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-chickenrice" onclick="toggleFavorite('chickenrice')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/cantoneseClaypotChickenRice.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Cantonese Claypot Chicken Rice</h5>
+              <p class="card-text">Claypot Chicken Rice is cooked in a claypot with marinated chicken, Chinese sausages,
+                and sometimes salted fish.
+                The claypot gives the rice a crispy bottom and infuses the dish with a smoky flavor.
+                The chicken is tender, and the dish is garnished with spring onions and soy sauce.</p>
+              <a href="chinese_res.html#rice" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-cantoneseclaypotchickenrice"
+                    onclick="toggleFavorite('cantoneseclaypotchickenrice')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/friedrice.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Fried Rice</h5>
+              <p class="card-text">Fried Rice is a versatile dish where rice is stir-fried with eggs, vegetables, and
+                meat like chicken or prawns. It's seasoned with soy sauce and garlic, making it a quick, flavorful
+                comfort food. The dish is often customized with different ingredients, reflecting local tastes and
+                creative personal preferences.</p>
+              <a href="chinese_res.html#rice" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-friedrice" onclick="toggleFavorite('friedrice')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/stickyrice.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Sticky Rice Dumplings</h5>
+              <p class="card-text">Zongzi, or Sticky Rice Dumplings, are made for the Dragon Boat Festival. These
+                dumplings, filled with glutinous rice, marinated pork, and salted egg yolk, are wrapped in bamboo leaves
+                and boiled until tender, resulting in a savory, aromatic treat.
+                The dumplings are especially popular during the Dragon Boat Festival.</p>
+              <a href="chinese_res.html#rice" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-stickyrice" onclick="toggleFavorite('stickyrice')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div id="noodles" class="container text-center">
+      <h1> Noodles</h1>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/hokkienmee.jpg" id="hokkienmee" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Hokkien Mee</h5>
+
+              <p class="card-text">Hokkien Mee is a well-known Southeast Asian cuisine, especially
+                in Malaysia and
+                Singapore, with variations across the region.
+                It is a stir-fried noodles, typically composed of yellow egg noodles.
+                The dish often includes ingredients like prawns, and chicken, sometimes pork belly or fish cake.</p>
+              <a href="chinese_res.html#noodles" class="btn btn-primary">Go to recommended restaurant</a>
+              <!-- <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" onclick="addFavorite('hokkienmee')"><i
+                    class="bi bi-heart"></i></button>
+                </div>
+              </div> -->
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-hokkienmee" onclick="toggleFavorite('hokkienmee')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/charkwayteow.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Char Kway Teow</h5>
+              <p class="card-text">Char Kway Teow is a popular stir-fried noodle dish made from flat rice noodles,
+                typically stir-fried with eggs, prawns, Chinese sausages (lap cheong), bean sprouts, and chives in a mix
+                of dark soy sauce and chili paste.
+                It is seasoned with a hint of smoky flavor from the wok, making it a rich and flavorful dish.</p>
+              <a href="chinese_res.html#noodles" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-charkwayteow" onclick="toggleFavorite('charkwayteow')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/currylaksa.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Curry Laksa</h5>
+              <p class="card-text">Curry Laksa is a spicy noodle soup made with coconut milk, curry, and various
+                ingredients such as tofu puffs, fish cakes, shrimp, and bean sprouts.
+                The noodles can be rice vermicelli or yellow egg noodles or even mix of the two.
+                This dish is known for its creamy and aromatic broth, which is both spicy and savory.</p>
+              <a href="chinese_res.html#noodles" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-currylaksa" onclick="toggleFavorite('currylaksa')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/assamlaksa.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Assam Laksa</h5>
+              <p class="card-text">Assam Laksa is a tangy and spicy fish-based noodle soup.
+                The broth is made from tamarind (assam), which gives it a sour flavor, and is cooked with mackerel,
+                lemongrass, and other herbs.
+                It's usually served with thick rice noodles and garnished with cucumber, pineapple, mint, and shrimp
+                paste (hae ko).</p>
+              <a href="chinese_res.html#noodles" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-assamlaksa" onclick="toggleFavorite('assamlaksa')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="pastry" class="container text-center">
+      <h1> Pastry</h1>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/mooncake.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Mooncake</h5>
+              <p class="card-text">Mooncake is a traditional pastry enjoyed during the Mid-Autumn
+                Festival. It has a thin crust and is filled with sweet red bean or lotus seed paste, often with a salted
+                egg yolk center, symbolizing the full moon.</p>
+              <a href="chinese_res.html#pastry" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-mooncake" onclick="toggleFavorite('mooncake')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/riceball.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Rice Ball</h5>
+              <p class="card-text">Tangyuan, or Rice Balls, are glutinous rice balls usually filled with sweet fillings
+                like sesame paste, red bean paste, or peanut butter.
+                They are often served in a sweet ginger syrup or soup and are traditionally eaten during the Lantern
+                Festival.</p>
+              <a href="chinese_res.html#pastry" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-riceball" onclick="toggleFavorite('riceball')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/kayatoast.jpg" class="card-img-top custom-img" alt="Responsive image">
+
+            <div class="card-body">
+              <h5 class="card-title">Kaya Toast with soft-boiled eggs</h5>
+              <p class="card-text">Kaya Toast is a popular breakfast item, featuring toasted bread spread with kaya, a
+                sweet coconut jam, and butter. It's typically paired with soft-boiled eggs, seasoned with soy sauce and
+                white pepper.</p>
+              <a href="chinese_res.html#pastry" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-kayatoast" onclick="toggleFavorite('kayatoast')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col mb-4">
+          <div class="card custom-card">
+            <img src="images/behtehsoh.jpg" class="card-img-top custom-img" alt="Responsive image">
+            <div class="card-body">
+              <h5 class="card-title">Beh Teh Soh / Heong Peng</h5>
+              <p class="card-text">Beh Teh Soh, also known as Heong Peng, is a traditional Chinese pastry filled with a
+                sticky, sweet maltose filling. The pastry is flaky and baked until golden brown, offering a delightful
+                contrast between the crisp exterior and the gooey center.</p>
+              <a href="chinese_res.html#pastry" class="btn btn-primary">Go to recommended restaurant</a>
+              <div class="container">
+                <div class="d-flex justify-content-end">
+                  <button class="btn" id="favorite-btn-behtehsoh" onclick="toggleFavorite('behtehsoh')">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="sharethis-inline-share-buttons"></div>
+    
+    <footer>
+        <p>&copy; 2024 Tasty Bites. All rights reserved.</p>
+    </footer>
+
+    <div id="cookie-consent-banner" class="cookie-banner">
+      <p class="cookie-text">
+        We value your privacy. We use cookies to enhance your browsing experience and analyze our traffic. By clicking
+        "Accept All", you consent to our use of cookies.
+      </p>
+      <div class="cookie-buttons">
+        <button id="reject-all" class="cookie-button">Reject All</button>
+        <button id="accept-all" class="cookie-button accept-button">Accept All</button>
+      </div>
+    </div>
+
+    
+  </body>
+
+  <script src="5.js"></script>
+  <audio id="popsound" src="popsound.mp3"></audio>
+
+  </div>
+  <script src="cookies_cn.js"></script>
+  <script src="favourite.js"></script>
+
+</html>
